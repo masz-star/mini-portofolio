@@ -9,17 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
 </head>
 <body>
 
-      <aside class="sidebar">
+  <!-- Tombol menu (muncul di HP) -->
+  <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
-    <img src="image/sidebar.jpg" alt="Foto profil Nama Kamu" class="foto-profil">
+  <aside class="sidebar">
+
+    <img src="image/sidebar.jpg" alt="Foto profil Dimas Arya Prasetya" class="foto-profil">
     <h2 class="nama-sidebar">Dimas Arya Prasetya</h2>
 
-        <div class="sosmed">
+    <div class="sosmed">
       <a href="https://github.com/masz-star" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
         <i class="fa-brands fa-github"></i>
       </a>
@@ -34,24 +37,29 @@
       </a>
     </div>
 
+    <button class="tombol-tema" id="tombolTema" title="Ganti tema" aria-label="Ganti tema">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
     <nav class="menu">
       <a href="#beranda">Home</a>
       <a href="#tentang">About</a>
       <a href="#skills">Skills</a>
-      <a href="#resume">Tools</a>
+      <a href="#tools">Tools</a>
       <a href="#kontak">Contact</a>
     </nav>
 
-    <p class="hak-cipta">&copy; 2026 Dimas Arya Prasetya</p>
+    <p class="hak-cipta">&copy; <span id="tahun">2026</span> Dimas Arya Prasetya</p>
 
   </aside>
 
-    <main>
+  <main>
 
     <section id="beranda">
       <div class="beranda-isi">
-        <h1>Dimas Arya Prasetya </h1>
-         <p class="deskripsi-singkat">
+        <h1>Dimas Arya Prasetya</h1>
+        <p class="peran">Saya seorang <span id="teksKetik"></span></p>
+        <p class="deskripsi-singkat">
           Hi! I'm Dimas, an Information Systems student passionate about technology, web development, and digital innovation. I love learning new things, exploring creative ideas, and turning them into meaningful projects.
         </p>
       </div>
@@ -67,8 +75,8 @@
           I enjoy exploring new technologies, learning programming, and developing creative ideas into meaningful digital projects. Through my academic journey and personal projects, I continue to improve my technical skills, problem-solving abilities, and creativity.
         </p>
         <p>
-         I'm always excited to learn new things, take on challenges, and gain experiences that help me grow both personally and professionally.
-"Always learning, always growing, and creating something meaningful."
+          I'm always excited to learn new things, take on challenges, and gain experiences that help me grow both personally and professionally.
+          "Always learning, always growing, and creating something meaningful."
         </p>
       </div>
 
@@ -78,12 +86,11 @@
       </div>
     </section>
 
-        <section id="skills">
+    <section id="skills">
       <h2>Skills</h2>
       <p class="pengantar">Hal-hal yang bisa saya bantu kerjakan:</p>
 
       <div class="daftar-skills">
-
         <article class="kartu-skills">
           <i class="fa-solid fa-laptop-code"></i>
           <h3>Pembuatan Website</h3>
@@ -107,56 +114,41 @@
           <h3>Fitur Interaktif</h3>
           <p>Menambahkan fitur seperti mode gelap, validasi form, dan animasi sederhana.</p>
         </article>
-
       </div>
     </section>
 
-    <section id="Tools">
-        <h2>My Tools</h2>
-          <div class="daftar-tools">
-
+    <section id="tools">
+      <h2>My Tools</h2>
+      <div class="daftar-tools">
         <article class="kartu-tools">
-          <div class="ikon-tools">
-            <img src="image/html.png" alt="Logo HTML">
-          </div>
+          <div class="ikon-tools"><img src="image/html.png" alt="Logo HTML"></div>
           <h3>HTML</h3>
         </article>
 
         <article class="kartu-tools">
-          <div class="ikon-tools">
-            <img src="image/css.png" alt="Logo CSS">
-          </div>
+          <div class="ikon-tools"><img src="image/css.png" alt="Logo CSS"></div>
           <h3>CSS</h3>
         </article>
 
         <article class="kartu-tools">
-          <div class="ikon-tools">
-            <img src="image/js.png" alt="Logo JavaScript">
-          </div>
+          <div class="ikon-tools"><img src="image/js.png" alt="Logo JavaScript"></div>
           <h3>JavaScript</h3>
         </article>
 
         <article class="kartu-tools">
-          <div class="ikon-tools">
-            <img src="image/Tailwind.jpg" alt="Logo Tailwind CSS">
-          </div>
+          <div class="ikon-tools"><img src="image/Tailwind.jpg" alt="Logo Tailwind CSS"></div>
           <h3>Tailwind CSS</h3>
         </article>
 
         <article class="kartu-tools">
-          <div class="ikon-tools">
-            <img src="image/mysql.png" alt="Logo MySQL">
-          </div>
+          <div class="ikon-tools"><img src="image/mysql.png" alt="Logo MySQL"></div>
           <h3>MySQL</h3>
         </article>
 
         <article class="kartu-tools">
-          <div class="ikon-tools">
-            <img src="image/java.jpg" alt="Logo Java">
-          </div>
+          <div class="ikon-tools"><img src="image/java.jpg" alt="Logo Java"></div>
           <h3>Java</h3>
         </article>
-
       </div>
     </section>
 
@@ -192,6 +184,11 @@
     </section>
 
   </main>
- 
+
+  <button class="tombol-atas" id="tombolAtas" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>

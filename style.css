@@ -158,6 +158,7 @@ section {
 #teksKetik {
   color: var(--warna-aksen);
   border-bottom: 3px solid var(--warna-aksen);
+  font-weight: 1000 ;
 }
 
 /* ===== Judul section ===== */
@@ -514,4 +515,126 @@ form textarea.salah {
   .kartu-tools {
     flex-basis: 100%;
   }
+}
+
+/* ======================================================
+   TEMPELKAN DI PALING BAWAH style.css
+   ====================================================== */
+
+/* ===== Menu aktif ===== */
+.menu a.aktif {
+  color: white;
+  background: #212431;
+  border-left: 3px solid var(--warna-aksen);
+}
+
+/* ===== Tombol mode gelap ===== */
+.tombol-tema {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #212431;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tombol-tema:hover {
+  background: var(--warna-aksen);
+}
+
+/* ===== Tombol menu HP (tersembunyi di desktop) ===== */
+.tombol-menu {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: var(--warna-sidebar);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== Tombol kembali ke atas ===== */
+.tombol-atas {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--warna-aksen);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.tombol-atas.terlihat {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Animasi muncul saat scroll ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.tampil {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===== Mode gelap ===== */
+[data-tema="dark"] {
+  --warna-background: #12181f;
+  --warna-section: #1d252e;
+  --warna-card: #1a222b;
+  --warna-border: #2c3641;
+  --warna-teks: #e4e8de;
+}
+
+[data-tema="dark"] #tentang .sapaan-tentang { color: #f1f3ee; }
+[data-tema="dark"] .pengantar,
+[data-tema="dark"] .kartu-skills p,
+[data-tema="dark"] .kartu p { color: #aab2bb; }
+[data-tema="dark"] .blob { background: var(--warna-aksen); }
+[data-tema="dark"] .info-kontak i { background: var(--warna-aksen); }
+[data-tema="dark"] .ikon-tools img { background: #fff; border-radius: 6px; padding: 2px; }
+
+body, .kartu-skills, .kartu-tools, form input, form textarea {
+  transition: background 0.3s, color 0.3s, border-color 0.2s;
+}
+
+/* ===== Responsif: sidebar jadi menu geser di HP ===== */
+@media (max-width: 900px) {
+  .tombol-menu { display: block; }
+
+  .sidebar {
+    z-index: 15;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.terbuka { transform: translateX(0); }
+
+  main { margin-left: 0; }
+
+  section { padding: 80px 24px; }
+
+  .beranda-isi h1 { margin-top: 120px; }
 }
